@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Student Registration</title>
+
+    </head>
+    <body>
+        <h3 style="text-align: center;">Student Registration</h3><hr/>
+        <form>
+            <label> Your Name : </label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required minlength="5"/> <br/>
+            <label> Enter Password : </label>
+                <input type="password" id="pass" name="pass"/><br/>
+            <label> Enter Age : </label>
+                <input type="number" id="age" name="age"/><br/>
+            <label> Choose Your Gender </label>
+                <input type="radio" name="gender" value="female">Female
+                <input type="radio" name="gender" value="male">Male <br/>
+            <label>Choose Your Courses</label>
+                <input type="checkbox" name="course" value="Math">Math
+                <input type="checkbox" name="course" value="English">English
+                <input type="checkbox" name="course" value="Chemistry">Chemistry
+                <input type="checkbox" name="course" value="Calculus">Calculus
+                <input type="checkbox" name="course" value="Physics">Physics
+                <input type="checkbox" name="course" value="Algebra">Algebra
+                <br/><br/><br/>
+            <label>Major</label>
+                <select name="major" multiple>
+                    <option value="English">English</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Art">Art</option>
+                    <option value="Business">Business</option>
+                    <option value="Psychology">Psychology</option>
+                </select>
+            <br/>
+            <label>Comments</label>
+            <textarea rows="5" cols="30"></textarea>
+            <br/>
+            <input type="submit" value="Submit"/>
+        </form>
+    </body>
+</html>
