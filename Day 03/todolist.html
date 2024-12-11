@@ -4,6 +4,37 @@
     <title>To-do List</title>
 </head>
 <body>
-    
+    <h1>To-Do List</h1>
+    <!-- input for task -->
+    <input type="text" id="taskInput" placeholder="Enter a task">
+    <button id="addButton">Add Task</button>
+
+    <!-- unordered list to display -->
+    <ul id="taskList"></ul>
+
+    <script>
+        const taskInput = document.getElementById("taskInput");
+        const addButton = document.getElementById("addButton");
+        const taskList = document.getElementById("taskList");
+
+        // event listener
+        addButton.addEventListener("click", function () {
+            // value of the input field
+            const taskText = taskInput.value.trim();
+
+            // check for empty input
+            if (taskText === "") {
+                alert("Please enter a task.");
+                return;
+            }
+            // create new list element for task
+            const newTask = document.createElement("li");
+            newTask.textContent = taskText;
+            // append task to list
+            taskList.appendChild(newTask);
+            // clear input for additional tasks
+            taskInput.value = "";
+        })
+    </script>
 </body>
 </html>
