@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>To-Do</title>
+        <style>
+            .selected {
+                background-color: #f8d7da;
+                color: #721c24;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>To-Do List</h1>
+        <input type="text" id="text1" placeholder="Add a task">
+        <button id="add">Add</button>
+        <button id="remove">Remove</button>
+        <button id="edit">Edit</button>
+        <ul id="myUL">
+
+        </ul>
+
+        <script>
+
+            var add_bttn = document.getElementById("add");
+            var rem_bttn = document.getElementById("remove");
+            var edit_bttn = document.getElementById("edit");
+
+            add_bttn.addEventListener("click", onClickHandlerAdd);
+            rem_bttn.addEventListener("click", onClickHandlerRemove);
+
+            function onClickHandlerAdd(){
+                let inputField = document.getElementById("text1");
+                let inputValue = inputField.value;
+
+                let newElement = document.createElement("li");
+                newElement.textContent = inputValue;
+
+                let whereToInsert = document.getElementById("myUL");
+                whereToInsert.appendChild(newElement);
+
+                inputField.value = "";
+            }
+
+
+        </script>
+    </body>
+</html>
