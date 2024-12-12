@@ -11,4 +11,16 @@ h1 {
 
 .removeBttn {
     margin-left: 2%;
+    color: white;
+    background-color: black;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+p {
+    text-align: center;
+    text-decoration: underline;
 }
