@@ -4,7 +4,7 @@ li {
 }
 
 h1 {
-    color: darkmagenta;
+    color: rgb(21, 1, 66);
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -23,4 +23,33 @@ h1 {
 p {
     text-align: center;
     text-decoration: underline;
+}
+
+/* users styles */
+#userInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 2px solid #2c3e50;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+/* individual user div */
+#userInfo div {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #eaf6f6;
+    color: #15222e;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#userInfo div:hover {
+    background-color: #d1f0f0;
+    cursor: pointer;
 }
