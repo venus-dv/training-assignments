@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>To-do List</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>To-Do List</h1>
@@ -30,6 +34,20 @@
             // create new list element for task
             const newTask = document.createElement("li");
             newTask.textContent = taskText;
+
+            // Remove button
+            const removeButton = document.createElement("button");
+            removeButton.textContent = "Remove";
+            removeButton.className = "removeBttn";
+
+            // remove button event listener
+            removeButton.addEventListener("click", function () {
+                newTask.remove();
+            })
+
+            // append remove button to list
+            newTask.appendChild(removeButton);
+
             // append task to list
             taskList.appendChild(newTask);
             // clear input for additional tasks

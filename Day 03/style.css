@@ -1,0 +1,14 @@
+li {
+    margin-bottom: 15px;
+    font-size: larger;
+}
+
+h1 {
+    color: darkmagenta;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.removeBttn {
+    margin-left: 2%;
+}
