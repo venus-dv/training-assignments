@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
-
+import React from 'react';
+import CommentsList from './CommentsList';
 function App() {
+  const post = {
+    comments: [
+      "This is my first comment.",
+      "Whoa look at my second comment.",
+      "How many more could there possibly be?",
+      "I guess it just keeps going...",
+      "Okay maybe it's done now..."
+    ]
+  };
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <title>Welcome</title>
+        <h1>Welcome...</h1>
+        <p>look at those comments down there ....</p>
+        </header>
+        
+        <h2>Post Comments</h2>
+        <CommentsList comments={post.comments} />
+      
     </div>
   );
 }
