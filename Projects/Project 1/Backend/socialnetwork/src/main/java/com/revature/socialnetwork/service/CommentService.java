@@ -1,16 +1,50 @@
 package com.revature.socialnetwork.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import com.revature.socialnetwork.repository.CommentRepository;
+import com.revature.socialnetwork.entity.Comment;
+import java.util.List;
 
 /**
- * Business rules and logic of Comments
+ * Interface for Comment Service to define the contract for comment-related
+ * operations.
  */
-@Service
-public class CommentService {
+public interface CommentService {
 
-    @Autowired
-    private CommentRepository commentRepository;
+    /**
+     * Adds a new comment to a post.
+     * 
+     * @param comment the comment to be added
+     * @return the added comment
+     */
+    Comment addComment(Comment comment);
+
+    /**
+     * Retrieves comments by post id
+     * 
+     * @param postId the id of the post
+     * @return a list of comments for the specified post
+     */
+    List<Comment> getCommentsByPostId(Integer postId);
+
+    /**
+     * Retrieves a comment by its ID.
+     * 
+     * @param id the id of the comment
+     * @return the comment with the given id
+     */
+    Comment getCommentById(Integer id);
+
+    /**
+     * Updates an existing comment
+     * 
+     * @param comment the comment with updated information
+     * @return the updated comment
+     */
+    Comment updateComment(Comment comment);
+
+    /**
+     * Deletes a comment by its id
+     * 
+     * @param id the id of the comment to be deleted
+     */
+    void deleteComment(Integer id);
 }

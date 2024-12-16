@@ -1,16 +1,42 @@
 package com.revature.socialnetwork.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import com.revature.socialnetwork.repository.FollowRepository;
+import com.revature.socialnetwork.entity.Follow;
+import java.util.List;
 
 /**
- * Business rules and logic of Follows
+ * Interface for Follow Service to define the contract for follow-related
+ * operations.
  */
-@Service
-public class FollowService {
+public interface FollowService {
 
-    @Autowired
-    private FollowRepository followRepository;
+    /**
+     * Follows a user
+     * 
+     * @param follow the follow relationship to be created
+     * @return the created follow relationship
+     */
+    Follow followUser(Follow follow);
+
+    /**
+     * Unfollows a user
+     * 
+     * @param followId the ID of the follow relationship to be deleted
+     */
+    void unfollowUser(Integer followId);
+
+    /**
+     * Retrieves the followers of a user
+     * 
+     * @param userId the id of the user
+     * @return a list of follow relationships where the user is the followee
+     */
+    List<Follow> getFollowers(Integer userId);
+
+    /**
+     * Retrieves the users followed by a user
+     * 
+     * @param userId the id of the user
+     * @return a list of follow relationships where the user is the follower
+     */
+    List<Follow> getFollowees(Integer userId);
 }
