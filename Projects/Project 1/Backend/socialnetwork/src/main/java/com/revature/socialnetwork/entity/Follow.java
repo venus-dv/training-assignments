@@ -11,6 +11,14 @@ import java.util.Date;
 public class Follow {
 
     /**
+     * An id for this follow relationship
+     */
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Integer id;
+
+    /**
      * The date when this follow relationship was created
      */
     @Temporal(TemporalType.TIMESTAMP)
@@ -49,6 +57,24 @@ public class Follow {
         this.createdAt = createdAt;
         this.follow = follow;
         this.follower = follower;
+    }
+
+    /**
+     * *
+     * Gets the id of the follow relationship
+     * * * @return the id
+     */
+    public Integer getId() {
+        return id;
+    }
+
+    /**
+     * * Sets the id of the follow relationship
+     * 
+     * * @param id the id to set
+     */
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     /**
