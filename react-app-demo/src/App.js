@@ -3,8 +3,7 @@ import Hello from "./Hello";
 import AxiosGetDemo from './components/axiosdemo/AxiosGetDemo';
 import Navbar from './Navbar';
 import ToDoList from './components/todolist/ToDoList';
-import StateDemoComponent from './components/StateDemoComponent';
-// import EventsDemoComponent from './components/EventsDemoComponent';
+import StateDemoComponent from './components/stateandevent/StateDemoComponent';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
