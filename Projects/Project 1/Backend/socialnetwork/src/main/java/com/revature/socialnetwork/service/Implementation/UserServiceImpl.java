@@ -65,10 +65,22 @@ public class UserServiceImpl implements UserService {
      * @return the updated user
      */
     @Override
-    public User updateUserProfile(User user) {
-        // Save the updated user entity to the database
+    public User updateUserProfile(int userId, User user) {
         return userRepository.save(user);
     }
+
+
+    @Override
+    public boolean deleteUser(int userId) {
+        try{
+            userRepository.deleteById(userId);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+
 
     /**
      * Searches for users by a given keyword in their username or email.
@@ -78,7 +90,16 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public List<User> searchUsers(String keyword) {
-        // Use the custom query method to search for users
         return userRepository.searchUsers(keyword);
+    }
+
+    /**
+     * Searches for all users
+     * 
+     * @return a list of all users
+     */
+    @Override
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
     }
 }
