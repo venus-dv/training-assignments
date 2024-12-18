@@ -5,10 +5,12 @@ import Navbar from './Navbar';
 import ToDoList from './components/todolist/ToDoList';
 import StateDemoComponent from './components/stateandevent/StateDemoComponent';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MyContext from './components/contextDemo/MyContext';
 
 function App() {
-  
+  const sharedData = 'This is some shared data';
   return (
+    <MyContext.Provider value = {sharedData}>
     <Router>
       <div className='app'>
         <Navbar/>
@@ -21,6 +23,7 @@ function App() {
 
       </Routes>
     </Router>
+    </MyContext.Provider>
   );
 }
 
