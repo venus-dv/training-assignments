@@ -17,6 +17,13 @@ public interface PostService {
      */
     Post createPost(Post post);
 
+
+    /**
+     * Retrieves all posts
+     * @return a list of all user posts
+     */
+    List<Post> getAllPosts();
+
     /**
      * Retrieves posts by user id
      * 
@@ -39,7 +46,7 @@ public interface PostService {
      * @param post the post with updated information
      * @return the updated post
      */
-    Post updatePost(Post post);
+    Post updatePost(int postId, Post post);
 
     /**
      * Deletes a post by its id
