@@ -31,6 +31,16 @@ public class CommentServiceImpl implements CommentService {
     }
 
     /**
+     * Retrieves all comments
+     * 
+     * @return a list of all comments
+     */
+    @Override
+    public List<Comment> getAllComments() {
+        return commentRepository.findAll();
+    }
+
+    /**
      * Retrieves comments by post id
      * 
      * @param postId the id of the post
@@ -62,19 +72,17 @@ public class CommentServiceImpl implements CommentService {
      * @return the updated comment
      */
     @Override
-    public Comment updateComment(Comment comment) {
-        // Save the updated comment entity to the database
+    public Comment updateComment(int commentId, Comment comment) {
         return commentRepository.save(comment);
     }
 
     /**
-     * Deletes a comment by its ID
+     * Deletes a comment by its id
      * 
-     * @param id the ID of the comment to be deleted
+     * @param id the id of the comment to be deleted
      */
     @Override
     public void deleteComment(Integer id) {
-        // Delete the comment entity by its ID
         commentRepository.deleteById(id);
     }
 }

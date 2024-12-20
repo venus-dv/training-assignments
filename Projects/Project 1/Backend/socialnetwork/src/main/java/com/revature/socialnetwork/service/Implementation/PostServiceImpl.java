@@ -57,13 +57,23 @@ public class PostServiceImpl implements PostService {
     }
 
     /**
+     * Retrieves all posts
+     * 
+     * @return a list of all posts
+     */
+    @Override
+    public List<Post> getAllPosts() {
+        return postRepository.findAll();
+    }
+
+    /**
      * Updates an existing post
      * 
      * @param post the post with updated information
      * @return the updated post
      */
     @Override
-    public Post updatePost(Post post) {
+    public Post updatePost(int postId, Post post) {
         // Save the updated post entity to the database
         return postRepository.save(post);
     }

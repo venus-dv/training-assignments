@@ -18,6 +18,13 @@ public interface CommentService {
     Comment addComment(Comment comment);
 
     /**
+     * Retrieves all comments
+     * 
+     * @return all comments
+     */
+    List<Comment> getAllComments();
+
+    /**
      * Retrieves comments by post id
      * 
      * @param postId the id of the post
@@ -39,7 +46,7 @@ public interface CommentService {
      * @param comment the comment with updated information
      * @return the updated comment
      */
-    Comment updateComment(Comment comment);
+    Comment updateComment(int commentId, Comment comment);
 
     /**
      * Deletes a comment by its id
