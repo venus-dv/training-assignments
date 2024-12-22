@@ -16,26 +16,26 @@ public class Reaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Integer id;
+    private int id;
 
     /**
      * The user who made this reaction
      */
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
 
     /**
      * The post associated with this reaction
      */
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "post_id")
     private Post post;
 
     /**
      * The comment associated with this reaction
      */
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "comment_id")
     private Comment comment;
 
@@ -70,7 +70,7 @@ public class Reaction {
      * @param reactionType the type of the reaction
      * @param createdAt    the date the reaction was created
      */
-    public Reaction(Integer id, User user, Post post, Comment comment, ReactionType reactionType, Date createdAt) {
+    public Reaction(int id, User user, Post post, Comment comment, ReactionType reactionType, Date createdAt) {
         this.id = id;
         this.user = user;
         this.post = post;
@@ -84,7 +84,7 @@ public class Reaction {
      * 
      * @return the id
      */
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
@@ -93,7 +93,7 @@ public class Reaction {
      * 
      * @param id the id to set
      */
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 

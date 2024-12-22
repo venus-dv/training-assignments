@@ -52,7 +52,7 @@ public class UserServiceImpl implements UserService {
      * @return the user with the given ID, or null if not found
      */
     @Override
-    public User getUserById(Integer id) {
+    public User getUserById(int id) {
         // Use Optional to handle the case where the user is not found
         Optional<User> user = userRepository.findById(id);
         return user.orElse(null);

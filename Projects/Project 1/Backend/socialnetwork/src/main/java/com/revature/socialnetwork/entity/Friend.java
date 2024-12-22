@@ -1,8 +1,8 @@
 package com.revature.socialnetwork.entity;
 
-import java.util.Date;
-
 import jakarta.persistence.*;
+
+import java.util.Date;
 
 /**
  * This class models a friend relationship between users
@@ -16,19 +16,19 @@ public class Friend {
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private int id;
 
     /**
      * The id of the user who initiated the friend request
      */
     @Column(name = "user_id", nullable = false)
-    private Integer userId;
+    private int userId;
 
     /**
      * The id of the user who is being requested as a friend
      */
     @Column(name = "friend_id", nullable = false)
-    private Integer friendId;
+    private int friendId;
 
     /**
      * The status of the friend request
@@ -57,7 +57,7 @@ public class Friend {
      * @param friendId the id of the user who is being requested as a friend
      * @param status   the status of the friend request
      */
-    public Friend(Integer userId, Integer friendId, FriendStatus status) {
+    public Friend(int userId, int friendId, FriendStatus status) {
         this.userId = userId;
         this.friendId = friendId;
         this.status = status;
@@ -69,7 +69,7 @@ public class Friend {
      * 
      * @return the id of the friend relationship
      */
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
@@ -78,7 +78,7 @@ public class Friend {
      * 
      * @param id the id to set
      */
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -87,7 +87,7 @@ public class Friend {
      * 
      * @return the user id
      */
-    public Integer getUserId() {
+    public int getUserId() {
         return userId;
     }
 
@@ -96,7 +96,7 @@ public class Friend {
      * 
      * @param userId the user id to set
      */
-    public void setUserId(Integer userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
@@ -105,7 +105,7 @@ public class Friend {
      * 
      * @return the friend id
      */
-    public Integer getFriendId() {
+    public int getFriendId() {
         return friendId;
     }
 
@@ -114,7 +114,7 @@ public class Friend {
      * 
      * @param friendId the friend id to set
      */
-    public void setFriendId(Integer friendId) {
+    public void setFriendId(int friendId) {
         this.friendId = friendId;
     }
 

@@ -19,7 +19,7 @@ public interface FriendRepository extends JpaRepository<Friend, Integer> {
      * @param userId the id of the user
      * @return a list of friends
      */
-    List<Friend> findByUserId(Integer userId);
+    List<Friend> findByUserId(int userId);
 
     /**
      * Finds friends by friend id
@@ -27,7 +27,7 @@ public interface FriendRepository extends JpaRepository<Friend, Integer> {
      * @param friendId the id of the friend
      * @return a list of friends
      */
-    List<Friend> findByFriendId(Integer friendId);
+    List<Friend> findByFriendId(int friendId);
 
     /**
      * Finds friends by user id and status
@@ -36,7 +36,7 @@ public interface FriendRepository extends JpaRepository<Friend, Integer> {
      * @param status the status of the friend request
      * @return a list of friends
      */
-    List<Friend> findByUserIdAndStatus(Integer userId, FriendStatus status);
+    List<Friend> findByUserIdAndStatus(int userId, FriendStatus status);
 
     /**
      * Finds friends by friend id and status
@@ -45,7 +45,7 @@ public interface FriendRepository extends JpaRepository<Friend, Integer> {
      * @param status the status of the friend request
      * @return a list of friends
      */
-    List<Friend> findByFriendIdAndStatus(Integer friendId, FriendStatus status);
+    List<Friend> findByFriendIdAndStatus(int friendId, FriendStatus status);
 
     /**
      * Finds a friend relationship by user id and friend id.
@@ -54,7 +54,7 @@ public interface FriendRepository extends JpaRepository<Friend, Integer> {
      * @param friendId the id of the friend
      * @return the friend relationship
      */
-    Friend findByUserIdAndFriendId(Integer userId, Integer friendId);
+    Friend findByUserIdAndFriendId(int userId, int friendId);
 
     /**
      * Deletes a friend relationship by user id and friend id
@@ -62,5 +62,5 @@ public interface FriendRepository extends JpaRepository<Friend, Integer> {
      * @param userId the id of the user
      * @param friendId the id of the friend
      */
-    void deleteByUserIdAndFriendId(Integer userId, Integer friendId);
+    void deleteByUserIdAndFriendId(int userId, int friendId);
 }

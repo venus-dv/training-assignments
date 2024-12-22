@@ -30,7 +30,7 @@ public interface CommentService {
      * @param postId the id of the post
      * @return a list of comments for the specified post
      */
-    List<Comment> getCommentsByPostId(Integer postId);
+    List<Comment> getCommentsByPostId(int postId);
 
     /**
      * Retrieves a comment by its ID.
@@ -38,7 +38,7 @@ public interface CommentService {
      * @param id the id of the comment
      * @return the comment with the given id
      */
-    Comment getCommentById(Integer id);
+    Comment getCommentById(int id);
 
     /**
      * Updates an existing comment
@@ -53,5 +53,5 @@ public interface CommentService {
      * 
      * @param id the id of the comment to be deleted
      */
-    void deleteComment(Integer id);
+    void deleteComment(int id);
 }
