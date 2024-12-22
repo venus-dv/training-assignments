@@ -38,7 +38,7 @@ public class PostServiceImpl implements PostService {
      * @return a list of posts created by the specified user
      */
     @Override
-    public List<Post> getPostsByUserId(Integer userId) {
+    public List<Post> getPostsByUserId(int userId) {
         return postRepository.findByUserId(userId);
     }
 
@@ -50,7 +50,7 @@ public class PostServiceImpl implements PostService {
      * @return the post with the given id, or null if not found
      */
     @Override
-    public Post getPostById(Integer id) {
+    public Post getPostById(int id) {
         // Use Optional to handle the case where the post is not found
         Optional<Post> post = postRepository.findById(id);
         return post.orElse(null);
@@ -84,7 +84,7 @@ public class PostServiceImpl implements PostService {
      * @param id the id of the post to be deleted
      */
     @Override
-    public void deletePost(Integer id) {
+    public void deletePost(int id) {
         postRepository.deleteById(id);
     }
 

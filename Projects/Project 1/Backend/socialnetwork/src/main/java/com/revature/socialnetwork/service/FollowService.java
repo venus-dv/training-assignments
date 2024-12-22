@@ -22,7 +22,7 @@ public interface FollowService {
      * 
      * @param followId the ID of the follow relationship to be deleted
      */
-    void unfollowUser(Integer followId);
+    void unfollowUser(int followId);
 
     /**
      * Retrieves the followers of a user
@@ -30,7 +30,7 @@ public interface FollowService {
      * @param userId the id of the user
      * @return a list of follow relationships where the user is the followee
      */
-    List<Follow> getFollowers(Integer userId);
+    List<Follow> getFollowers(int userId);
 
     /**
      * Retrieves the users followed by a user
@@ -38,5 +38,5 @@ public interface FollowService {
      * @param userId the id of the user
      * @return a list of follow relationships where the user is the follower
      */
-    List<Follow> getFollowees(Integer userId);
+    List<Follow> getFollowees(int userId);
 }

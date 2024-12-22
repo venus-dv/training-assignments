@@ -61,7 +61,9 @@ public class CommentController {
      */
     @GetMapping("/{commentId}")
     public ResponseEntity<Comment> getCommentById(@PathVariable int commentId) {
+        System.out.println("Entered getCommentById");
         Comment comment = commentService.getCommentById(commentId);
+//        comment.setPostId(1);
         return ResponseEntity.ok(comment);
     }
 

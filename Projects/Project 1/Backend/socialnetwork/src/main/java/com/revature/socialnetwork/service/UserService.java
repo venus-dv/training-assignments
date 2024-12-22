@@ -32,7 +32,7 @@ public interface UserService {
      * @param id the user's id
      * @return the user with the given id
      */
-    User getUserById(Integer id);
+    User getUserById(int id);
 
     /**
      * Updates the profile of an existing user

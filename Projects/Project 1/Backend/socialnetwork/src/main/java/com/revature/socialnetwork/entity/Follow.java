@@ -16,7 +16,7 @@ public class Follow {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Integer id;
+    private int id;
 
     /**
      * The date when this follow relationship was created
@@ -28,7 +28,7 @@ public class Follow {
     /**
      * The user who is being followed
      */
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "follow_id")
     private User follow;
 
@@ -64,7 +64,7 @@ public class Follow {
      * Gets the id of the follow relationship
      * * * @return the id
      */
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
@@ -73,7 +73,7 @@ public class Follow {
      * 
      * * @param id the id to set
      */
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
