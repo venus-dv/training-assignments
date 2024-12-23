@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1eae624f-933c-41b7-9a8f-d9c32e3f2d27" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/dto/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-network/src/components/Feed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-network/src/components/Post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-network/src/containers/HomepageContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/social-network/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/social-network/src/components/Navbar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
