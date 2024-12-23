@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1eae624f-933c-41b7-9a8f-d9c32e3f2d27" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/social-network/src/components/LandingPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social-network/src/components/LoginPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social-network/src/containers/LandingPageContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social-network/src/containers/LoginContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/dto/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/social-network/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,13 +25,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "git-widget-placeholder": "dev",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;
   }
-}]]></component>
+}</component>
   <component name="TaskManager">
     <servers />
   </component>
