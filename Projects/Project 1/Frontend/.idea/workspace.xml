@@ -4,19 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="055c0ab8-f206-45bb-ab19-e8eac191399b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social-network/src/components/SignupForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social-network/src/containers/SignupContainer.js" afterDir="false" />
+    <list default="true" id="1eae624f-933c-41b7-9a8f-d9c32e3f2d27" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Backend/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/repository/CommentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/service/Implementation/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/service/Implementation/CommentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/test/java/com/revature/socialnetwork/SocialnetworkApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/social-network/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/social-network/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/social-network/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network/src/containers/SignupContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/social-network/src/containers/SignupContainer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,63 +20,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;venus-dv&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "dev",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/venus-dv/training-assignments.git&quot;,
-    &quot;accountId&quot;: &quot;fd9bb6f8-e91f-4d7a-b30e-9c6084426354&quot;
-  }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="2qaUSLthlRwCtPI52XbD91PUdn3" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;front-end-dev&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/v_hp1/Revature/Projects/Project 1/Backend&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  }
-}</component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.218" />
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.218" />
-      </set>
-    </attachedChunks>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+}]]></component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="055c0ab8-f206-45bb-ab19-e8eac191399b" name="Changes" comment="" />
-      <created>1734900179001</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1734900179001</updated>
-      <workItem from="1734900181947" duration="12529000" />
-    </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
 </project>
