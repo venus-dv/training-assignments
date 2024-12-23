@@ -16,7 +16,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Integer id;
+    private int id;
 
     /**
      * A first name for this user
@@ -111,7 +111,7 @@ public class User {
      * @param createdAt
      * @param updatedAt
      */
-    public User(Integer id, String firstName, String lastName, String email, String password, Date birthdate,
+    public User(int id, String firstName, String lastName, String email, String password, Date birthdate,
             String profilePicUrl, String bio, Date createdAt, Date updatedAt) {
         this.id = id;
         this.firstName = firstName;
@@ -130,7 +130,7 @@ public class User {
      * 
      * @return the id
      */
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
@@ -139,7 +139,7 @@ public class User {
      * 
      * @param id the id to set
      */
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 

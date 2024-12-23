@@ -1,0 +1,19 @@
+{
+  "posts": [
+    {
+      "id": "f7f5",
+      "title": "Posts R Us",
+      "body": "Hello World"
+    },
+    {
+      "id": "ea0c",
+      "title": "Second",
+      "body": "Today is Tuesday"
+    },
+    {
+      "id": "4c07",
+      "title": "Third Post",
+      "body": "The weather is cloudy today"
+    }
+  ]
+}

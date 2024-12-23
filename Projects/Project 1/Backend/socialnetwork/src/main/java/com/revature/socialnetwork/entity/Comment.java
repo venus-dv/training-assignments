@@ -17,12 +17,12 @@ public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Integer id;
+    private int id;
 
     /**
      * The content for this comment
      */
-    @Column(columnDefinition = "TEXT")
+    @Column(columnDefinition = "TEXT", name = "content")
     private String content;
 
     /**
@@ -35,14 +35,14 @@ public class Comment {
     /**
      * The post id for this comment
      */
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "post_id")
     private Post post;
 
     /**
      * The user who created this comment
      */
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
 
@@ -59,10 +59,10 @@ public class Comment {
      * @param id        the id of the comment
      * @param content   the content of the comment
      * @param createdAt the date the comment was created
-     * @param post_id   the post associated with the comment
+     * @param post   the post associated with the comment
      * @param user      the user who created the comment
      */
-    public Comment(Integer id, String content, Date createdAt, Post post, User user) {
+    public Comment(int id, String content, Date createdAt, Post post, User user) {
         this.id = id;
         this.content = content;
         this.createdAt = createdAt;
@@ -75,7 +75,7 @@ public class Comment {
      * 
      * @return id
      */
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
@@ -84,7 +84,7 @@ public class Comment {
      * 
      * @param id the id to set
      */
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 

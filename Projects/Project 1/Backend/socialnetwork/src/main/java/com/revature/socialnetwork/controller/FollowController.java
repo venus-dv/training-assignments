@@ -37,7 +37,7 @@ public class FollowController {
      * @return a response indicating the result of the operation
      */
     @DeleteMapping("/{followId}")
-    public ResponseEntity<Void> unfollowUser(@PathVariable Integer followId) {
+    public ResponseEntity<Void> unfollowUser(@PathVariable int followId) {
         followService.unfollowUser(followId);
         return ResponseEntity.ok().build();
     }
@@ -49,7 +49,7 @@ public class FollowController {
      * @return a list of follow relationships where the user is the followee
      */
     @GetMapping("/{userId}/followers")
-    public ResponseEntity<List<Follow>> getFollowers(@PathVariable Integer userId) {
+    public ResponseEntity<List<Follow>> getFollowers(@PathVariable int userId) {
         List<Follow> followers = followService.getFollowers(userId);
         return ResponseEntity.ok(followers);
     }
@@ -61,7 +61,7 @@ public class FollowController {
      * @return a list of follow relationships where the user is the follower
      */
     @GetMapping("/{userId}/followees")
-    public ResponseEntity<List<Follow>> getFollowees(@PathVariable Integer userId) {
+    public ResponseEntity<List<Follow>> getFollowees(@PathVariable int userId) {
         List<Follow> followees = followService.getFollowees(userId);
         return ResponseEntity.ok(followees);
     }

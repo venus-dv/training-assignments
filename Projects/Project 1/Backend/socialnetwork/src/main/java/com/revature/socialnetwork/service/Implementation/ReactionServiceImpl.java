@@ -39,7 +39,7 @@ public class ReactionServiceImpl implements ReactionService {
      * @return a list of reactions for the specified post
      */
     @Override
-    public List<Reaction> getReactionsByPostId(Integer postId) {
+    public List<Reaction> getReactionsByPostId(int postId) {
         return reactionRepository.findByPostId(postId);
     }
 
@@ -50,7 +50,7 @@ public class ReactionServiceImpl implements ReactionService {
      * @return a list of reactions for the specified comment
      */
     @Override
-    public List<Reaction> getReactionsByCommentId(Integer commentId) {
+    public List<Reaction> getReactionsByCommentId(int commentId) {
         return reactionRepository.findByCommentId(commentId);
     }
 
@@ -62,7 +62,7 @@ public class ReactionServiceImpl implements ReactionService {
      * @return the reaction with the given id or null if not found
      */
     @Override
-    public Reaction getReactionById(Integer id) {
+    public Reaction getReactionById(int id) {
         // Use Optional to handle the case where the reaction is not found
         Optional<Reaction> reaction = reactionRepository.findById(id);
         return reaction.orElse(null);
@@ -74,7 +74,7 @@ public class ReactionServiceImpl implements ReactionService {
      * @param id the id of the reaction to be deleted
      */
     @Override
-    public void deleteReaction(Integer id) {
+    public void deleteReaction(int id) {
         reactionRepository.deleteById(id);
     }
 
@@ -86,7 +86,7 @@ public class ReactionServiceImpl implements ReactionService {
      * @return the number of reactions of the specified type for the post
      */
     @Override
-    public Long countReactionsByTypeForPost(Integer postId, ReactionType reactionType) {
+    public int countReactionsByTypeForPost(int postId, ReactionType reactionType) {
         // Count reactions by post id and reaction type
         return reactionRepository.countByPostIdAndReactionType(postId, reactionType);
     }
@@ -99,7 +99,7 @@ public class ReactionServiceImpl implements ReactionService {
      * @return the number of reactions of the specified type for the comment
      */
     @Override
-    public Long countReactionsByTypeForComment(Integer commentId, ReactionType reactionType) {
+    public int countReactionsByTypeForComment(int commentId, ReactionType reactionType) {
         // Count reactions by comment id and reaction type
         return reactionRepository.countByCommentIdAndReactionType(commentId, reactionType);
     }

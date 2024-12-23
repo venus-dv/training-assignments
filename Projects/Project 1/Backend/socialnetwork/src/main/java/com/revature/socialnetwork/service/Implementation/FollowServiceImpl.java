@@ -36,7 +36,7 @@ public class FollowServiceImpl implements FollowService {
      * @param followId the ID of the follow relationship to be deleted
      */
     @Override
-    public void unfollowUser(Integer followId) {
+    public void unfollowUser(int followId) {
         followRepository.deleteById(followId);
     }
 
@@ -47,7 +47,7 @@ public class FollowServiceImpl implements FollowService {
      * @return a list of follow relationships where the user is the followee
      */
     @Override
-    public List<Follow> getFollowers(Integer userId) {
+    public List<Follow> getFollowers(int userId) {
         // Find follow relationships where the user is the followee
         return followRepository.findByFollowId(userId);
     }
@@ -59,7 +59,7 @@ public class FollowServiceImpl implements FollowService {
      * @return a list of follow relationships where the user is the follower
      */
     @Override
-    public List<Follow> getFollowees(Integer userId) {
+    public List<Follow> getFollowees(int userId) {
         // Find follow relationships where the user is the follower
         return followRepository.findByFollowerId(userId);
     }

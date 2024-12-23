@@ -16,7 +16,7 @@ public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Integer id;
+    private int id;
 
     /**
      * The content body of this post
@@ -47,7 +47,7 @@ public class Post {
     /**
      * The user who created this post
      */
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
 
@@ -69,7 +69,7 @@ public class Post {
      * @param updatedAt the date the post was last updated
      * @param user      the user who created the post
      */
-    public Post(Integer id, String body, Date createdAt, String mediaUrl, Date updatedAt, User user) {
+    public Post(int id, String body, Date createdAt, String mediaUrl, Date updatedAt, User user) {
         this.id = id;
         this.body = body;
         this.createdAt = createdAt;
@@ -83,7 +83,7 @@ public class Post {
      * 
      * @return the id
      */
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
@@ -92,7 +92,7 @@ public class Post {
      * 
      * @param id the id to set
      */
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 

@@ -30,7 +30,7 @@ public interface PostService {
      * @param userId the id of the user
      * @return a list of posts created by the specified user
      */
-    List<Post> getPostsByUserId(Integer userId);
+    List<Post> getPostsByUserId(int userId);
 
     /**
      * Retrieves a post by its id
@@ -38,7 +38,7 @@ public interface PostService {
      * @param id the id of the post
      * @return the post with the given id
      */
-    Post getPostById(Integer id);
+    Post getPostById(int id);
 
     /**
      * Updates an existing post
@@ -53,7 +53,7 @@ public interface PostService {
      * 
      * @param id the id of the post to be deleted
      */
-    void deletePost(Integer id);
+    void deletePost(int id);
 
     /**
      * Searches for posts by a given keyword in the post content

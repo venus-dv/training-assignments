@@ -47,7 +47,7 @@ public class CommentServiceImpl implements CommentService {
      * @return a list of comments for the specified post
      */
     @Override
-    public List<Comment> getCommentsByPostId(Integer postId) {
+    public List<Comment> getCommentsByPostId(int postId) {
         return commentRepository.findByPost_Id(postId);
     }
 
@@ -59,7 +59,7 @@ public class CommentServiceImpl implements CommentService {
      * @return the comment with the given ID, or null if not found
      */
     @Override
-    public Comment getCommentById(Integer id) {
+    public Comment getCommentById(int id) {
         // Use Optional to handle the case where the comment is not found
         Optional<Comment> comment = commentRepository.findById(id);
         return comment.orElse(null);
@@ -82,7 +82,7 @@ public class CommentServiceImpl implements CommentService {
      * @param id the id of the comment to be deleted
      */
     @Override
-    public void deleteComment(Integer id) {
+    public void deleteComment(int id) {
         commentRepository.deleteById(id);
     }
 }

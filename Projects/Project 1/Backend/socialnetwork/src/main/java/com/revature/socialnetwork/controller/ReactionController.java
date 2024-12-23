@@ -38,7 +38,7 @@ public class ReactionController {
      * @return a list of reactions for the specified post
      */
     @GetMapping("/post/{postId}")
-    public ResponseEntity<List<Reaction>> getReactionsByPostId(@PathVariable Integer postId) {
+    public ResponseEntity<List<Reaction>> getReactionsByPostId(@PathVariable int postId) {
         List<Reaction> reactions = reactionService.getReactionsByPostId(postId);
         return ResponseEntity.ok(reactions);
     }
@@ -50,7 +50,7 @@ public class ReactionController {
      * @return a list of reactions for the specified comment
      */
     @GetMapping("/comment/{commentId}")
-    public ResponseEntity<List<Reaction>> getReactionsByCommentId(@PathVariable Integer commentId) {
+    public ResponseEntity<List<Reaction>> getReactionsByCommentId(@PathVariable int commentId) {
         List<Reaction> reactions = reactionService.getReactionsByCommentId(commentId);
         return ResponseEntity.ok(reactions);
     }
@@ -62,7 +62,7 @@ public class ReactionController {
      * @return the reaction with the specified id
      */
     @GetMapping("/{id}")
-    public ResponseEntity<Reaction> getReactionById(@PathVariable Integer id) {
+    public ResponseEntity<Reaction> getReactionById(@PathVariable int id) {
         Reaction reaction = reactionService.getReactionById(id);
         return ResponseEntity.ok(reaction);
     }
@@ -74,7 +74,7 @@ public class ReactionController {
      * @return a response indicating the result of the operation
      */
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteReaction(@PathVariable Integer id) {
+    public ResponseEntity<Void> deleteReaction(@PathVariable int id) {
         reactionService.deleteReaction(id);
         return ResponseEntity.ok().build();
     }
@@ -87,10 +87,10 @@ public class ReactionController {
      * @return the number of reactions of the specified type for the post
      */
     @GetMapping("/post/{postId}/count")
-    public ResponseEntity<Long> countReactionsByTypeForPost(
-            @PathVariable Integer postId,
+    public ResponseEntity<Integer> countReactionsByTypeForPost(
+            @PathVariable int postId,
             @RequestParam ReactionType reactionType) {
-        Long count = reactionService.countReactionsByTypeForPost(postId, reactionType);
+        int count = reactionService.countReactionsByTypeForPost(postId, reactionType);
         return ResponseEntity.ok(count);
     }
 
@@ -102,10 +102,10 @@ public class ReactionController {
      * @return the number of reactions of the specified type for the comment
      */
     @GetMapping("/comment/{commentId}/count")
-    public ResponseEntity<Long> countReactionsByTypeForComment(
-            @PathVariable Integer commentId,
+    public ResponseEntity<Integer> countReactionsByTypeForComment(
+            @PathVariable int commentId,
             @RequestParam ReactionType reactionType) {
-        Long count = reactionService.countReactionsByTypeForComment(commentId, reactionType);
+        int count = reactionService.countReactionsByTypeForComment(commentId, reactionType);
         return ResponseEntity.ok(count);
     }
 }
