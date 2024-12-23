@@ -5,17 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1eae624f-933c-41b7-9a8f-d9c32e3f2d27" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Backend/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/config/CorsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-network/src/components/LandingPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-network/src/components/LoginPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-network/src/containers/LandingPageContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-network/src/containers/LoginContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network/src/containers/SignupContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/social-network/src/containers/SignupContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/social-network/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
