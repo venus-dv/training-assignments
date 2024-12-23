@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 public interface CommentRepository extends JpaRepository<Comment, Integer> {
-    List<Comment> findByPostId(Integer postId);
+    List<Comment> findByPost_Id(Integer postId);
 
     @Query("SELECT c FROM Comment c WHERE c.content LIKE %:keyword%")
     List<Comment> searchComments(@Param("keyword") String keyword);

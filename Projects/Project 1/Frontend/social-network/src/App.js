@@ -1,18 +1,16 @@
 import './App.css';
-import {AppBar} from "@mui/material";
-import {Component} from "react";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import SignupContainer from "./containers/SignupContainer";
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <AppBar color="primary" position="static">
-                    <h1>ChitChat</h1>
+const App = () => {
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<SignupContainer/>} />
 
-                </AppBar>
-            </div>
-        )
-    }
-}
+            </Routes>
+        </Router>
+    );
+};
 
 export default App;

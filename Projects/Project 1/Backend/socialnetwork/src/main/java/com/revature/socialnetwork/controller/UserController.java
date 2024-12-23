@@ -27,6 +27,7 @@ public class UserController {
      */
     @PostMapping
     public ResponseEntity<User> createUser(@RequestBody User user) {
+
         User createdUser = userService.registerUser(user);
         return ResponseEntity.ok(createdUser);
     }
