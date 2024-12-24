@@ -1,17 +1,22 @@
 import React from 'react';
 import { TextField, Button, Container, Typography } from '@mui/material';
 
-const LoginPage = ({ credentials, handleChange, handleSubmit }) => {
+const LoginForm = ({ loginDetails, handleChange, handleSubmit, error }) => {
     return (
         <Container maxWidth="sm">
             <Typography variant="h4" component="h1" gutterBottom>
                 Login
             </Typography>
+            {error && (
+                <Typography color="error" variant="body1" gutterBottom>
+                    {error}
+                </Typography>
+            )}
             <form onSubmit={handleSubmit}>
                 <TextField
                     label="Email"
                     name="email"
-                    value={credentials.email}
+                    value={loginDetails.email}
                     onChange={handleChange}
                     fullWidth
                     margin="normal"
@@ -20,7 +25,7 @@ const LoginPage = ({ credentials, handleChange, handleSubmit }) => {
                     label="Password"
                     type="password"
                     name="password"
-                    value={credentials.password}
+                    value={loginDetails.password}
                     onChange={handleChange}
                     fullWidth
                     margin="normal"
@@ -33,4 +38,4 @@ const LoginPage = ({ credentials, handleChange, handleSubmit }) => {
     );
 };
 
-export default LoginPage;
+export default LoginForm;

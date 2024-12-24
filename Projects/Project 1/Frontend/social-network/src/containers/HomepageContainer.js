@@ -22,9 +22,15 @@ const HomepageContainer = () => {
         }
     });
 
+    const [username, setUsername] = useState(null);
 
 
     useEffect(() => {
+        const storedUsername = localStorage.getItem('username');
+        if (storedUsername) {
+            setUsername(storedUsername);
+        }
+
         const fetchPosts = async () => {
             try {
                 const response = await axios.get('http://localhost:8080/api/posts');

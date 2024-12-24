@@ -5,12 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1eae624f-933c-41b7-9a8f-d9c32e3f2d27" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/service/Implementation/PostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/service/Implementation/PostServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/service/PostService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/controller/SessionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-network/src/api/sessionApi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-network/src/components/LoginForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-network/src/components/SessionManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-network/src/containers/LoginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/entity/Comment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/social-network/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network/src/components/LoginPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/social-network/src/components/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/social-network/src/components/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/social-network/src/components/Post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/social-network/src/containers/HomepageContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/social-network/src/containers/HomepageContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network/src/containers/LoginContainer.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
