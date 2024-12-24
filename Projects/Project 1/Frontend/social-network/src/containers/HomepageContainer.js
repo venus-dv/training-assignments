@@ -4,19 +4,37 @@ import Feed from '../components/Feed';
 import axios from 'axios';
 
 const HomepageContainer = () => {
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState({
+        body: "",
+        createdAt: "",
+        mediaUrl: "",
+        updatedAt: "",
+        user: {
+            first_name: "",
+            last_name: '',
+            email: '',
+            password: '',
+            birthdate: '',
+            profilePicUrl: '',
+            bio: '',
+            createdAt: '',
+            updatedAt: ''
+        }
+    });
+
+
 
     useEffect(() => {
         const fetchPosts = async () => {
             try {
                 const response = await axios.get('http://localhost:8080/api/posts');
                 console.log('Fetched posts: ', response.data);
+
                 setPosts(response.data);
             } catch (error) {
                 console.error('Error fetching posts:', error);
             }
         };
-
         fetchPosts();
     }, []);
 
