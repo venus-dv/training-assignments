@@ -5,6 +5,7 @@ import com.revature.socialnetwork.entity.Post;
 import com.revature.socialnetwork.service.PostService;
 import com.revature.socialnetwork.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -76,7 +77,14 @@ public class PostController {
      */
     @DeleteMapping("/{postId}")
     public ResponseEntity<Void> deletePost(@PathVariable int postId) {
-        postService.deletePost(postId);
-        return ResponseEntity.ok().build();
+//        postService.deletePost(postId);
+//        return ResponseEntity.ok().build();
+
+        boolean isDeleted = postService.deletePost(postId);
+        if (isDeleted) {
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
 }
