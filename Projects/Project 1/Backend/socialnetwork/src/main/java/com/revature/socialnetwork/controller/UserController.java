@@ -1,10 +1,15 @@
 package com.revature.socialnetwork.controller;
 
+import com.revature.socialnetwork.dto.LoginRequest;
 import com.revature.socialnetwork.entity.User;
 import com.revature.socialnetwork.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,6 +23,21 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    private AuthenticationManager authenticationManager;
+
+    @PostMapping("/login")
+    public ResponseEntity<?> authenticateUser(@RequestBody LoginRequest loginRequest) {
+        Authentication authentication = authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(
+                        loginRequest.getEmail(),
+                        loginRequest.getPassword()
+                )
+        );
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+        // Generate token or return user details
+        return ResponseEntity.ok("User authenticated successfully");
+    }
 
     /**
      * Creates a new user
