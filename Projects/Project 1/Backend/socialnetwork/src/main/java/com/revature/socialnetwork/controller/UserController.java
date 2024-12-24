@@ -3,6 +3,8 @@ package com.revature.socialnetwork.controller;
 import com.revature.socialnetwork.dto.LoginRequest;
 import com.revature.socialnetwork.entity.User;
 import com.revature.socialnetwork.service.UserService;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,16 +29,22 @@ public class UserController {
     private AuthenticationManager authenticationManager;
 
     @PostMapping("/login")
-    public ResponseEntity<?> authenticateUser(@RequestBody LoginRequest loginRequest) {
-        Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(
-                        loginRequest.getEmail(),
-                        loginRequest.getPassword()
-                )
-        );
-        SecurityContextHolder.getContext().setAuthentication(authentication);
+    public ResponseEntity<?> authenticateUser(@RequestBody LoginRequest loginRequest, HttpSession session) {
+//        Authentication authentication = authenticationManager.authenticate(
+//                new UsernamePasswordAuthenticationToken(
+//                        loginRequest.getEmail(),
+//                        loginRequest.getPassword()
+//                )
+//        );
+//        SecurityContextHolder.getContext().setAuthentication(authentication);
+
+
+
+        // Set session attribute
+        session.setAttribute("email", loginRequest.getEmail());
+
         // Generate token or return user details
-        return ResponseEntity.ok("User authenticated successfully");
+        return ResponseEntity.ok("User authenticated successfully with email: " + session.getAttribute("email"));
     }
 
     /**
