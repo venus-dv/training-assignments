@@ -6,6 +6,7 @@ import HomepageContainer from "./containers/HomepageContainer";
 import LoginPage from "./containers/LoginPage";
 import SessionManager from "./components/SessionManager";
 import LoginForm from "./components/LoginForm";
+import ProfileContainer from "./containers/ProfileContainer";
 
 const App = () => {
     return (
@@ -15,6 +16,7 @@ const App = () => {
                 <Route path="/home" element={<HomepageContainer />} />
                 <Route path="/login" element={<LoginPage/>} />
                 <Route path="/signup" element={<SignupContainer/>} />
+                <Route path="/profile" element={<ProfileContainer/>} />
                 <Route path="/session" element={<SessionManager/>} />
 
 
