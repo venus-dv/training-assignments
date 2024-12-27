@@ -5,6 +5,8 @@ import com.revature.socialnetwork.entity.User;
 import com.revature.socialnetwork.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +25,8 @@ import java.util.List;
 @RequestMapping("/api/users")
 public class UserController {
 
+    private static final Logger log = LoggerFactory.getLogger(UserController.class);
+
     @Autowired
     private UserService userService;
 
@@ -30,21 +34,15 @@ public class UserController {
 
     @PostMapping("/login")
     public ResponseEntity<?> authenticateUser(@RequestBody LoginRequest loginRequest, HttpSession session) {
-//        Authentication authentication = authenticationManager.authenticate(
-//                new UsernamePasswordAuthenticationToken(
-//                        loginRequest.getEmail(),
-//                        loginRequest.getPassword()
-//                )
-//        );
-//        SecurityContextHolder.getContext().setAuthentication(authentication);
-
-
-
-        // Set session attribute
-        session.setAttribute("email", loginRequest.getEmail());
-
-        // Generate token or return user details
-        return ResponseEntity.ok("User authenticated successfully with email: " + session.getAttribute("email"));
+        try {
+            User user = userService.loginUser(loginRequest.getEmail(), loginRequest.getPassword());
+            session.setAttribute("userName",user.getFirstName() + " " + user.getLastName());
+            session.setAttribute("email", loginRequest.getEmail());
+            return ResponseEntity.ok(user.getFirstName() + " " + user.getLastName());
+        } catch (Exception e) {
+            log.error(e.getMessage());
+            return ResponseEntity.ok("");
+        }
     }
 
     /**
