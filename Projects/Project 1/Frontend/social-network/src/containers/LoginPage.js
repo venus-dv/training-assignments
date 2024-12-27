@@ -22,9 +22,14 @@ const LoginPage = () => {
         try {
             const data = await login(loginDetails.email, loginDetails.password);
             console.log('Login attempt with:', loginDetails);
-            alert(data); // Replace with actual success handling
-            localStorage.setItem('username', loginDetails.email)
-            navigate('/home')
+            if (data.length <= 0){
+                localStorage.setItem('username', "");
+                alert("Email or password is incorrect. Try again.");
+            } else {
+                localStorage.setItem('username', data);
+                localStorage.setItem('email', loginDetails.email);
+                navigate('/home');
+            }
         } catch (err) {
             setError('Invalid login credentials');
         }
