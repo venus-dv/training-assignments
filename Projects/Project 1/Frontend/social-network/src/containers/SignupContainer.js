@@ -7,7 +7,12 @@ const SignupContainer = () => {
         first_name: '',
         last_name: '',
         email: '',
-        password: ''
+        password: '',
+        birthdate: '',
+        profilePicUrl: '',
+        bio: '',
+        createdAt: '',
+        updatedAt: ''
     });
 
     const handleChange = (e) => {
@@ -25,7 +30,7 @@ const SignupContainer = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:8080/api/users/', user, {headers: headers});
+            const response = await axios.post('http://localhost:8080/api/users', user, {headers: headers});
             console.log(response.data);
             // Handle successful registration (e.g., redirect to login page or show success message)
         } catch (error) {

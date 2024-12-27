@@ -4,24 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="055c0ab8-f206-45bb-ab19-e8eac191399b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social-network/src/components/SignupForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social-network/src/containers/SignupContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/pom.xml" afterDir="false" />
+    <list default="true" id="1eae624f-933c-41b7-9a8f-d9c32e3f2d27" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/dto/LoginResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/controller/CommentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/entity/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/entity/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/entity/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/repository/CommentRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/service/Implementation/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/socialnetwork/src/main/java/com/revature/socialnetwork/service/Implementation/CommentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/socialnetwork/src/test/java/com/revature/socialnetwork/SocialnetworkApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/social-network/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/social-network/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/social-network/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network/src/api/sessionApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/social-network/src/api/sessionApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/social-network/src/components/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network/src/components/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/social-network/src/components/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network/src/components/SignupForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/social-network/src/components/SignupForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network/src/containers/HomepageContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/social-network/src/containers/HomepageContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network/src/containers/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/social-network/src/containers/LoginPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
@@ -41,7 +51,7 @@
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
-  <component name="ProjectId" id="2qaUSLthlRwCtPI52XbD91PUdn3" />
+  <component name="ProjectId" id="2qmxWrdLoj0eQBBlSnbuVUPqLae" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -50,14 +60,17 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;front-end-dev&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/v_hp1/Revature/Projects/Project 1/Backend&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/v_hp1/Revature/Projects/Project 1/Frontend&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -73,12 +86,14 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="055c0ab8-f206-45bb-ab19-e8eac191399b" name="Changes" comment="" />
-      <created>1734900179001</created>
+      <changelist id="1eae624f-933c-41b7-9a8f-d9c32e3f2d27" name="Changes" comment="" />
+      <created>1735281587553</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1734900179001</updated>
-      <workItem from="1734900181947" duration="12529000" />
+      <updated>1735281587553</updated>
+      <workItem from="1735281589126" duration="23000" />
+      <workItem from="1735281625008" duration="276000" />
+      <workItem from="1735281949772" duration="15327000" />
     </task>
     <servers />
   </component>

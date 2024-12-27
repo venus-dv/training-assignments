@@ -51,9 +51,9 @@ public interface PostService {
     /**
      * Deletes a post by its id
      * 
-     * @param id the id of the post to be deleted
+     * @param postId the id of the post to be deleted
      */
-    void deletePost(int id);
+    boolean deletePost(int postId);
 
     /**
      * Searches for posts by a given keyword in the post content

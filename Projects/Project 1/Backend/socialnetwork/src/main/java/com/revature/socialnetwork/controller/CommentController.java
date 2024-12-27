@@ -2,6 +2,8 @@ package com.revature.socialnetwork.controller;
 
 import com.revature.socialnetwork.entity.Comment;
 import com.revature.socialnetwork.service.CommentService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +17,8 @@ import java.util.List;
 @RequestMapping("/api/comments")
 public class CommentController {
 
+    private static final Logger log = LoggerFactory.getLogger(CommentController.class);
+
     @Autowired
     private CommentService commentService;
 
@@ -26,6 +30,7 @@ public class CommentController {
      */
     @PostMapping
     public ResponseEntity<Comment> addComment(@RequestBody Comment comment) {
+        log.info(comment.getContent() + " " + comment.getPost().getId() + " " + comment.getUserId().getId());
         Comment createdComment = commentService.addComment(comment);
         return ResponseEntity.ok(createdComment);
     }
@@ -50,6 +55,7 @@ public class CommentController {
     @GetMapping("/post/{postId}")
     public ResponseEntity<List<Comment>> getCommentsByPostId(@PathVariable int postId) {
         List<Comment> comments = commentService.getCommentsByPostId(postId);
+        log.info(comments.get(0).getContent() + " " + comments.get(0).getPost().getId() + " " + comments.get(0).getUserId().getId());
         return ResponseEntity.ok(comments);
     }
 

@@ -10,13 +10,6 @@ import com.revature.socialnetwork.entity.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
-    /**
-     * Custom query method to find a user by email
-     * 
-     * @param email the email of the user
-     * @return the user connected to the email
-     */
-    User findByEmail(String email);
 
     /**
      * Custom query method to find a user by their email and password for

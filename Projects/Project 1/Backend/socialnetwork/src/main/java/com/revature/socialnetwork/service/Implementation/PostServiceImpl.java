@@ -81,11 +81,18 @@ public class PostServiceImpl implements PostService {
     /**
      * Deletes a post by its id
      * 
-     * @param id the id of the post to be deleted
+     * @param postId the id of the post to be deleted
      */
     @Override
-    public void deletePost(int id) {
-        postRepository.deleteById(id);
+    public boolean deletePost(int postId) {
+
+//        postRepository.deleteById(id);
+        try{
+            postRepository.deleteById(postId);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     /**

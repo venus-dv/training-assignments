@@ -1,5 +1,6 @@
 package com.revature.socialnetwork.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import java.util.Date;
 
@@ -8,6 +9,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "posts")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Post {
 
     /**
@@ -47,8 +49,8 @@ public class Post {
     /**
      * The user who created this post
      */
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     /**

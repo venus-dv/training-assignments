@@ -1,12 +1,16 @@
 package com.revature.socialnetwork.controller;
 
+import com.revature.socialnetwork.dto.PostRequest;
 import com.revature.socialnetwork.entity.Post;
 import com.revature.socialnetwork.service.PostService;
+import com.revature.socialnetwork.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * REST controller for managing posts
@@ -19,6 +23,16 @@ public class PostController {
     private PostService postService;
 
     /**
+     * Retrieves all posts
+     *
+     * @return the list of all posts
+     */
+    @GetMapping
+    public ResponseEntity<List<Post>> getAllPosts() {
+        return ResponseEntity.ok(postService.getAllPosts());
+    }
+
+    /**
      * Creates a new post
      *
      * @param post the post details to create
@@ -28,17 +42,6 @@ public class PostController {
     public ResponseEntity<Post> createPost(@RequestBody Post post) {
         Post createdPost = postService.createPost(post);
         return ResponseEntity.ok(createdPost);
-    }
-
-    /**
-     * Retrieves all posts
-     *
-     * @return the list of all posts
-     */
-    @GetMapping
-    public ResponseEntity<List<Post>> getAllPosts() {
-        List<Post> posts = postService.getAllPosts();
-        return ResponseEntity.ok(posts);
     }
 
     /**
@@ -74,7 +77,14 @@ public class PostController {
      */
     @DeleteMapping("/{postId}")
     public ResponseEntity<Void> deletePost(@PathVariable int postId) {
-        postService.deletePost(postId);
-        return ResponseEntity.ok().build();
+//        postService.deletePost(postId);
+//        return ResponseEntity.ok().build();
+
+        boolean isDeleted = postService.deletePost(postId);
+        if (isDeleted) {
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
 }
