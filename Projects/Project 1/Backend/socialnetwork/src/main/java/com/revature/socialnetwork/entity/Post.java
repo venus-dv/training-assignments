@@ -1,5 +1,6 @@
 package com.revature.socialnetwork.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import java.util.Date;
 
@@ -8,6 +9,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "posts")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Post {
 
     /**

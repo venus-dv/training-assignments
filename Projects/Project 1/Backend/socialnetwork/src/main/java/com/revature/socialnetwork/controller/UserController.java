@@ -1,9 +1,9 @@
 package com.revature.socialnetwork.controller;
 
 import com.revature.socialnetwork.dto.LoginRequest;
+import com.revature.socialnetwork.dto.LoginResponse;
 import com.revature.socialnetwork.entity.User;
 import com.revature.socialnetwork.service.UserService;
-import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,9 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -38,7 +35,10 @@ public class UserController {
             User user = userService.loginUser(loginRequest.getEmail(), loginRequest.getPassword());
             session.setAttribute("userName",user.getFirstName() + " " + user.getLastName());
             session.setAttribute("email", loginRequest.getEmail());
-            return ResponseEntity.ok(user.getFirstName() + " " + user.getLastName());
+            LoginResponse loginResponse = new LoginResponse();
+            loginResponse.setUserId(user.getId());
+            loginResponse.setUsername(user.getFirstName() + " " + user.getLastName());
+            return ResponseEntity.ok(loginResponse);
         } catch (Exception e) {
             log.error(e.getMessage());
             return ResponseEntity.ok("");
