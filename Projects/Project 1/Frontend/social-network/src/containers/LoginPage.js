@@ -22,11 +22,12 @@ const LoginPage = () => {
         try {
             const data = await login(loginDetails.email, loginDetails.password);
             console.log('Login attempt with:', loginDetails);
-            if (data.length <= 0){
+            if (data.username <= 0){
                 localStorage.setItem('username', "");
                 alert("Email or password is incorrect. Try again.");
             } else {
-                localStorage.setItem('username', data);
+                localStorage.setItem('userId', data.userId);
+                localStorage.setItem('username', data.username);
                 localStorage.setItem('email', loginDetails.email);
                 navigate('/home');
             }

@@ -35,7 +35,7 @@ const Navbar = () => {
                 <Typography variant="h6" sx={{ flexGrow: 1 }}>
                     ChitChat
                 </Typography>
-                <p>Welcome, {username}</p>
+                <p style={{ flexGrow: 1, textAlign: 'center' }}>Welcome, {username}</p>
                 <Box>
                     <Button color="inherit" onClick={() => handleNavigation('/profile')}>Profile</Button>
                     <Button color="inherit" onClick={() => handleLogout()}>Sign Out</Button>

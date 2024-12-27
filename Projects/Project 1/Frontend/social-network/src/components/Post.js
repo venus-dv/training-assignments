@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
+import axios from 'axios';
 import { Card, CardContent, Typography, Avatar, Box, Button, TextField } from '@mui/material';
+import {getUser, saveComments} from "../api/sessionApi";
 
 const Post = ({ post }) => {
     const [showComments, setShowComments] = useState(false);
@@ -11,12 +13,46 @@ const Post = ({ post }) => {
         setShowComments(!showComments);
     };
 
-    const handleAddComment = () => {
+    const handleAddComment = async () => {
         if (newComment.trim()) {
-            setComments([...comments, { text: newComment, user: localStorage.getItem('username') }]);
+            const newCommentObj = { text: newComment, user: localStorage.getItem('username') };
+            setComments(prevComments => [...prevComments, newCommentObj]);
+
+            const storedUserId = localStorage.getItem('userId');
+            const user = await getUser(storedUserId);
+
+            await saveComments(newComment, post, user);
             setNewComment('');
         }
     };
+
+
+    const handleSaveComment = async (e) => {
+        setNewComment(e.target.value);
+    };
+
+    useEffect(() => {
+        const fetchPosts = async () => {
+            try {
+                const response = await axios.get(`http://localhost:8080/api/comments/post/${post.id}`);
+                const comments = response.data;
+
+                const formattedComments = comments.map(comment => {
+                    return {
+                        text: comment.content,
+                        user: `${comment.userId.firstName} ${comment.userId.lastName}`
+                    };
+                });
+
+                setComments(formattedComments);
+            } catch (error) {
+                // console.error('Error fetching comments:', error);
+            }
+        };
+
+        fetchPosts();
+    }, [post.id]);
+
 
     return (
         <Card sx={{ marginBottom: 4 }}>
@@ -45,7 +81,7 @@ const Post = ({ post }) => {
                                 variant="outlined"
                                 fullWidth
                                 value={newComment}
-                                onChange={(e) => setNewComment(e.target.value)}
+                                onChange={handleSaveComment}
                             />
                             <Button onClick={handleAddComment} sx={{ ml: 2 }}>
                                 Post
